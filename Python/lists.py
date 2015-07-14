@@ -36,3 +36,12 @@ print "The maximum value is", max(ivalues)
 
 # we can shorten the above code to
 ivalues = [int(line) for line in open("values.txt")]
+
+
+# python does not have a C-style for loop; python's for loop
+# uses a list of values to iterate a counter through
+for i in [0,1,2,3,4,5]:
+    print i
+
+for i in range(6):
+    print i
