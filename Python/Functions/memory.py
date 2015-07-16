@@ -7,7 +7,6 @@ print "id(y):", id(y)
 # What gets printed?
 
 
-
 # So y and x are bound to the same value in memory. Is that what you get for primitive types in C?
 
 
@@ -16,8 +15,14 @@ print "id(y):", id(y)
 # All values are placed on the heap, and bindings to those values are placed in the namespace.
 
 # All assignment = operators bind a new reference in the namespace
+x = "hello"
 y = 11
 print "new id(y):", id(y)
+
+
+z = 11 - 1
+print id(z)
+
 # y previously was bound to the same 10 as x; now it is bound to a different value
 
 # When all bindings to a value are lost, the value may be garbage collected.
