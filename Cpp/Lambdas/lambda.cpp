@@ -48,7 +48,7 @@ int main() {
 
 std::function<int(int)> ReturnFunc() {
    int local = 10;
-   auto func = [&local](int param) {
+   auto func = [local](int param) {
       return local * param;
    };
 
