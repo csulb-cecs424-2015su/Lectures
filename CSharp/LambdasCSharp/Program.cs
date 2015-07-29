@@ -18,6 +18,8 @@ namespace LambdasCSharp {
          // Do not need to explicitly capture variables from outside scope.
          int outer1 = 10;
          Func<int, int> h = (a) => { return a + outer1; };
+         outer1 = 1000;
+         Console.WriteLine(h(5));
 
          Func<int, int> i = ReturnFunction();
          Console.WriteLine(i(5)); // how is this different than the C++ example? Can you explain?
