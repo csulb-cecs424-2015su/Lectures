@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ReplState" timestamp="1438628785629">{:repl-history {:ide [], :local [&quot;(0 [100])&quot; &quot;(-main)&quot;], :remote []}}</component>
+  <component name="ReplState" timestamp="1438798350531">{:repl-history {:ide [], :local [&quot;(0 [100])&quot; &quot;(-main)&quot; &quot;5&quot; &quot;(+ 5 12)&quot; &quot;(* (- 7 2) (Math/pow 8 2))&quot; &quot;(* (- 7 2) (Math/pow 8 2)&quot; &quot;(first '(1 2 3 4))&quot; &quot;(next '(1 2 3 4))&quot; &quot;(cons 5 '(1 2 3 4))&quot; &quot;(first (next '(1 2 3 4)))&quot; &quot;(second '(1 2 3 4))&quot; &quot;(first (next (next '(1 2 3 4))))&quot; &quot;(first (next (next '(1 2))))&quot; &quot;(println 1)&quot;], :remote []}}</component>
 </project>
