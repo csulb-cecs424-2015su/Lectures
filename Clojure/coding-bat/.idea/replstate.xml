@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ReplState" timestamp="1438833963885">{:repl-history {:ide [], :local [&quot;(sum13 [1 13 2 4 13])&quot; &quot;(load-file \&quot;core.clj\&quot;)&quot; &quot;(load-file \&quot;src/core.clj\&quot;)&quot; &quot;1&quot; &quot;(load-file \&quot;src/coding_bat/core.clj\&quot;)&quot; &quot;(has22 [1 2 3 4])&quot; &quot;(has22 [1 2 2 3 4])&quot; &quot;(has22 [1 2 1 2 3 4])&quot; &quot;(has22 [1 2 1 2 2 3 4])&quot;], :remote []}}</component>
+</project>
