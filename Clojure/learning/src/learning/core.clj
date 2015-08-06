@@ -18,21 +18,21 @@
       (myfind x (next coll)))))
 
 (defn mysome [f coll]
-  (if (nil? coll)
+  (if (= 0 (count coll))
     false
     (if (f (first coll))
       true
       (mysome f (next coll)))))
 
 (defn myevens [coll]
-  (if (nil? coll)
+  (if (= 0 (count coll))
     nil
     (if (even? (first coll))
       (cons (first coll) (myevens (next coll)))
       (myevens (next coll)))))
 
 (defn myfilter [f? coll]
-  (if (nil? coll)
+  (if (= 0 (count coll))
     nil
     (if (f? (first coll))
       (cons (first coll) (myfilter f? (next coll)))

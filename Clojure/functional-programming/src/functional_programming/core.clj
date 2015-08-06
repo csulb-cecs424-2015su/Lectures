@@ -5,6 +5,11 @@
 
 (def mylist '(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15))
 
+(defn mymap [f coll]
+  (if (= 0 (count coll))
+    nil
+    (cons (f (first coll)) (mymap f (next coll)))))
+
 
 (defn -main
   [& args]
@@ -14,7 +19,8 @@
   (println (filter pos? mylist))
 
   ; challenge: filter to multiples of 3
-
+  (println (filter #(= 0 (mod % 3)) mylist))
+  (println (filter #(and (<= 5 %) (>= 10 %)) mylist))
 
   ; (map f coll)
   ; return a new list by applying f to each element of coll.
@@ -22,7 +28,7 @@
   (println (map #(* % %) mylist))
 
   ; challenge: map the even elements of mylist to half their value
-
+  (println (mymap #(/ % 2) (filter even? mylist)))
 
 
   ; challenge: implement map as a clojure function
@@ -38,7 +44,12 @@
   (println (reduce + 0 mylist))
   (println (reduce * 1 mylist))
 
+  ; write a function to find the largest value in a collection
+  (println (reduce max mylist))
+  (println (reduce #(not (or %1 %2)) (map even? mylist)))
+
   ; challenge: find the sum of the even elements of mylist
+  (println (reduce + 0 (filter even? mylist)))
 
 
   ; challenge: find the sum of half of each even element in mylist

@@ -57,10 +57,13 @@
   ; sorts the collection by comparing the result of (key-fn item) for each item
   ; in the collection. Uses comp to decide the ordering (<, >).
 
-  (prn (sort-by :budget > disney)) ; sort the films by budget, decreasing order
+  (prn (sort-by :budget < disney)) ; sort the films by budget, decreasing order
 
   ; challenge: return only the titles of the movies, sorted in decreasing order by earnings
+  (prn (map :title (sort-by :earnings > (filter #(= (:production-company %) "Pixar Animation Studios") disney))))
 
+
+  ; challenge: return only the titles of PIXAR movies, sorted in increasing order by budget
 
 
   )
