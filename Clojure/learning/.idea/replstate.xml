@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ReplState" timestamp="1438816888633">{:repl-history {:ide [], :local [&quot;(myfilter [1 2 3 4 5] even?)&quot;], :remote []}}</component>
+  <component name="ReplState" timestamp="1438833963849">{:repl-history {:ide [], :local [&quot;(myfilter [1 2 3 4 5] even?)&quot; &quot;(load-file \&quot;src/learning/core.clj\&quot;)&quot; &quot;(if (= 1 2) \&quot;Yes\&quot; \&quot;No\&quot;) ; evaluates to?&quot; &quot;mylist&quot; &quot;(mysecond mylist)&quot; &quot;(when (= x 5) \&quot;When!\&quot;)&quot; &quot;(for [i mylist] (* i i))&quot; &quot;(map #(* % %) mylist)&quot;], :remote []}}</component>
 </project>
