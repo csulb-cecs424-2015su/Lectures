@@ -38,6 +38,17 @@
       (cons (first coll) (myfilter f? (next coll)))
       (myfilter f? (next coll)))))
 
+
+(defn dart[] (list (rand) (rand)))
+(defn is-hit? [d] (>= 1 (+ (* (first d) (first d)) (* (second d) (second d)))))
+(defn throw-darts [n] (take n (repeatedly dart)))
+(defn count-hits [n] (count (filter #(is-hit? %) (throw-darts n))))
+(defn pi-seq [n] (* 4 (/ (count-hits n) (double n))))
+
+(defn pi-par [n]
+  (let [hits (reduce + (pmap #(if (is-hit? %) 1 0) (throw-darts n)))]
+    (* 4 (/ hits (double n)))))
+
 (defn -main
   [& args]
 
