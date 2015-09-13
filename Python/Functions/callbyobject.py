@@ -15,14 +15,14 @@ def changeMutable(lst):
     lst.append(1000)
 
 x = 10
-print "Before function:", x
+print("Before function:", x)
 changeImmutable(x)
-print "After function:", x
+print("After function:", x)
 
 y = [1, 2, 3]
-print "Before function:", y
+print("Before function:", y)
 changeMutable(y)
-print "After function:", y
+print("After function:", y)
 
 # Python does not have true "pass by reference" like C/C++ does.
 # There is no way for me to pass y to a function, and have that

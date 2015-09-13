@@ -9,7 +9,7 @@ def fun1(param1):
     return fun2 # note the new return value
 
 f = fun1(13)
-print f # "<function fun2>"
+print(f) # "<function fun2>"
 
 # Before we execute f, think about the variables that it refers to.
 # Since we are no longer in fun1, what value could "param1" possibly have?
@@ -17,4 +17,4 @@ print f # "<function fun2>"
 # or is it?
 
 # So what do we think will happen when I do this?
-print f(100)
+print(f(100))

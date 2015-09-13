@@ -1,15 +1,15 @@
 def fibonacci_numbers(n):
     "Generates the first n fibonacci numbers"
     n1, n2 = 0, 1 # multiple variable declarations
-    for i in xrange(n):
+    for i in range(n):
         yield n1  # what is this keyword?
         n3 = n1 + n2
         n1 = n2
         n2 = n3
 
 for i in fibonacci_numbers(10):
-    print i,
-print sum(fibonacci_numbers(10))    
+    print(i, end=" ")
+print(sum(fibonacci_numbers(10)))
 
 # A generator function returns an iterable sequence that provides one value at
 # a time through the yield statement. Each time yield is executed, the 

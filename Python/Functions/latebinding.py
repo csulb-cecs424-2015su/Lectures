@@ -4,7 +4,7 @@ def func():
     return globalvalue * 2
 
 globalvalue = 1
-print func()
+print(func())
 # What is the output?
 
 
@@ -15,9 +15,9 @@ def func2(param1):
     return inner
 
 f = func2(5)
-print f() # What is the output?
+print(f()) # What is the output?
 
 globalvalue = 1000
-print f()
+print(f())
 # What is the output now? Is that the only possible way a language
 # might handle this?

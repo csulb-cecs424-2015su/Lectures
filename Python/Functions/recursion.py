@@ -4,7 +4,7 @@ def factorial(n):
         return 1
     return n * factorial(n-1)
 
-print factorial(5)
+print(factorial(5))
 
 
 # A tail-recursive implementation of factorial
@@ -16,7 +16,7 @@ def factorial_tail(n, prod):
 
 # Names can be re-bound to new values at any time.
 def factorial(n):
-    print "Tail factorial" # To be sure our new version is running
+    print("Tail factorial") # To be sure our new version is running
     return factorial_tail(n, 1)
 
-print factorial(5)
+print(factorial(5))

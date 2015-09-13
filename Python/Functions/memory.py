@@ -1,9 +1,9 @@
 # Before continuing, we should examine Python's memory model
 x = 10
 # The id() function returns the memory address (or some other unique identifier) of a binding
-print "id(x):", id(x)
+print("id(x):", id(x))
 y = x
-print "id(y):", id(y)
+print("id(y):", id(y))
 # What gets printed?
 
 
@@ -17,11 +17,7 @@ print "id(y):", id(y)
 # All assignment = operators bind a new reference in the namespace
 x = "hello"
 y = 11
-print "new id(y):", id(y)
-
-
-z = 11 - 1
-print id(z)
+print("new id(y):", id(y))
 
 # y previously was bound to the same 10 as x; now it is bound to a different value
 
@@ -33,7 +29,7 @@ y = 100
 a = []
 b = a
 a.append(1)
-print b
+print(b)
 # As a Java programmer, what output do you expect?
 
 # Why did we get that output?
