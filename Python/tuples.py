@@ -1,6 +1,6 @@
 # a tuple is similar to a list, but immutable
 person = ("Neal", "Terrell", "CECS")
-print person[0]
+print(person[0])
 
 # tuples can be "unpacked" into multiple variables
 first, last, department = person
@@ -15,10 +15,10 @@ for line in open("portfolio.csv"):
     stock = (fields[0], int(fields[1]), float(fields[2]))
     portfolio.append(stock)
 
-print "Your portfolio:"
-print "\n".join(["%s: %d shares at $%0.2f" % (s[0], s[1], s[2]) \
-                 for s in portfolio])
-print "Total value: $%0.2f" % sum([s[1] * s[2] for s in portfolio])
+print("Your portfolio:")
+print("\n".join(["%s: %d shares at $%0.2f" % (s[0], s[1], s[2]) \
+                 for s in portfolio]))
+print("Total value: $%0.2f" % sum([s[1] * s[2] for s in portfolio]))
 # explain what just happened!
 
 

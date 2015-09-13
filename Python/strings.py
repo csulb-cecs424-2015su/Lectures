@@ -16,11 +16,11 @@ g = b[5:]   # g == "424 is awesome"
 # concatenation with +
 h = a + b
 # repetition with *
-print a * 2
+print(a * 2)
 
 # parse with int()
-print "5" + "2" # "52"
-print int("5") + int("2") # 7
+print("5" + "2") # "52"
+print(int("5") + int("2")) # 7
 
 # values can be converted to strings with str()
-print str(100) # "100"
+print(str(100)) # "100"

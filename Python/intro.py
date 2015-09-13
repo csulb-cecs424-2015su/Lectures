@@ -1,4 +1,4 @@
-print "$1000 in a bank account with 5% interest"
+print("$1000 in a bank account with 5% interest")
 
 # as a dynamically typed language, types are not associated with names but
 # with values.
@@ -11,7 +11,7 @@ while year <= numyears:
     principal = principal * (1 + rate)
     # what type of variable is principal bound to now?
     
-    print "%3d %0.2f" % (year, principal)
+    print("%3d %0.2f" % (year, principal))
     year += 1
 
 
