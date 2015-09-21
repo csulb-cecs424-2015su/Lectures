@@ -1,20 +1,27 @@
-# What happens when a nested function is returned?
-def fun1(param1):
-    local1 = param1 * 2
+# Suppose we want a function that creates a function to raise a value
+# to a specific exponent.
+def power_function(exponent):
 
     # A nested function.
-    def fun2(param2):
-        return param2 % local1
+    def raise_power(base):
+        return base ** exponent # ** is raising to a power in Python
 
-    return fun2 # note the new return value
+    return raise_power # note this
 
-f = fun1(13)
-print(f) # "<function fun2>"
 
-# Before we execute f, think about the variables that it refers to.
-# Since we are no longer in fun1, what value could "param1" possibly have?
-# What about "local1"? fun2 uses local1, but local1 is no longer in memory...
-# or is it?
+fourth_power = power_function(4)
+print(fourth_power) # "<function power_function.<locals>.raise_power>"
+# fourth_power is a function that takes one argument, and raises that
+# argument to the fourth power.
 
-# So what do we think will happen when I do this?
-print(f(100))
+# I can use it like this:
+print(fourth_power(2)) # 16
+print(fourth_power(3)) # 81
+
+
+# Think about how that must have worked... we executed the function "raise_power"
+# which was only declared in the scope of power_function.
+#
+# Since we are no longer in power_function, its parameters are no longer in scope.
+# So when raise_power is finally executed... how does "ebase ** exponent" actually
+# work?

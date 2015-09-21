@@ -7,8 +7,9 @@ def fun1(param1):
 # and returned from a procedure.
 
 x = fun1
+print(x) # <function fun1 at 0x000000280D62BD90>
 x(1)
-# fun1 can be assigned to a variable
+# fun1 can be assigned to a variable!
 
 def fun2(f):
     print("I am in fun2 and I will now call my parameter function")

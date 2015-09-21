@@ -23,6 +23,11 @@ print("new id(y):", id(y))
 
 # When all bindings to a value are lost, the value may be garbage collected.
 y = 100
+print("new id(y):", id(y))
+
+# Or the value might persist
+y = 11 # no way to know if this will bind to the same 11 as before, or a different 11
+print("new id(y):", id(y))
 
 
 # This has implications for references to mutable values
