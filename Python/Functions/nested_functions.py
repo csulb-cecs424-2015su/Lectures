@@ -18,5 +18,6 @@ def fun1(param1):
     return local3
 
 print(fun1(13))
+print(fun2)
 
 # Why would you want to do this?

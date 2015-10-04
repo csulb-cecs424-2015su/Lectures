@@ -18,6 +18,12 @@ namespace LambdasCSharp {
          // Do not need to explicitly capture variables from outside scope.
          int outer1 = 10;
          Func<int, int> h = (a) => { return a + outer1; };
+         Console.WriteLine(h(5)); // Expected output?
+
+         // What if we change outer1?
+         // What will we output if C# uses:
+         //    - shallow (late) binding?
+         //    - deep (early) binding?
          outer1 = 1000;
          Console.WriteLine(h(5));
 

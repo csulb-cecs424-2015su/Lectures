@@ -25,3 +25,9 @@ print(fourth_power(3)) # 81
 # Since we are no longer in power_function, its parameters are no longer in scope.
 # So when raise_power is finally executed... how does "ebase ** exponent" actually
 # work?
+
+
+x = power_function(2)
+y = power_function(3)
+
+print(x(3), y(3))
