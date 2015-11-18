@@ -58,7 +58,7 @@
 (defn do-turn [player dealer deck strategy]
   (strategy player dealer deck))
 
-(defn user-turn [hand dealer deck]
+(defn user-turn [hand dealer deck]0
   (let [score (hand-total hand)]
     (println "Player hand:" (clojure.string/join ", " (map card-string hand))
              ";" score "points")
