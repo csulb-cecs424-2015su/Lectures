@@ -1,7 +1,8 @@
 -module(fibonacci).
 -export([fib/1, fib3serial/1, fibloop/0, fib3parallel/1]).
 
-fib(N) when N=:=0; N=:=1 -> 1;
+fib(0) -> 1;
+fib(1) -> 1;
 fib(N) when N>1 -> fib(N-1) + fib(N-2);
 fib(_) -> undefined.
 
