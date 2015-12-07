@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ReplState" timestamp="1438887999286">{:repl-history {:ide [], :local [&quot;(load-file \&quot;src/maps/core.clj\&quot;)&quot; &quot;(-main)&quot;], :remote []}}</component>
-</project>

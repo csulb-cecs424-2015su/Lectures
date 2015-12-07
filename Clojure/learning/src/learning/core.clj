@@ -5,49 +5,37 @@
 ; (def *binding* *value)
 ; create a global binding to a value
 (def x 10)
-(def mylist '(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15))
+(def mylist (list 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15))
 
 (defn mysecond [coll]
   (first (next coll)))
 
 (defn myfind [x coll]
-  (if (nil? coll)
-    false
-    (if (= x (first coll))
-      true
-      (myfind x (next coll)))))
-
-(defn mysome [f coll]
-  (if (= 0 (count coll))
-    false
-    (if (f (first coll))
-      true
-      (mysome f (next coll)))))
+  (cond
+    (empty? coll) false
+    (= x (first coll)) true
+    :else (myfind x (next coll))))
 
 (defn myevens [coll]
-  (if (= 0 (count coll))
+  (if (empty? coll)
     nil
     (if (even? (first coll))
       (cons (first coll) (myevens (next coll)))
       (myevens (next coll)))))
 
-(defn myfilter [f? coll]
-  (if (= 0 (count coll))
+(defn mysome [f coll]
+  (if (empty? coll)
+    false
+    (if (f (first coll))
+      true
+      (mysome f (next coll)))))
+
+(defn myfilter [f coll]
+  (if (empty? coll)
     nil
-    (if (f? (first coll))
-      (cons (first coll) (myfilter f? (next coll)))
-      (myfilter f? (next coll)))))
-
-
-(defn dart[] (list (rand) (rand)))
-(defn is-hit? [d] (>= 1 (+ (* (first d) (first d)) (* (second d) (second d)))))
-(defn throw-darts [n] (take n (repeatedly dart)))
-(defn count-hits [n] (count (filter #(is-hit? %) (throw-darts n))))
-(defn pi-seq [n] (* 4 (/ (count-hits n) (double n))))
-
-(defn pi-par [n]
-  (let [hits (reduce + (pmap #(if (is-hit? %) 1 0) (throw-darts n)))]
-    (* 4 (/ hits (double n)))))
+    (if (f (first coll))
+      (cons (first coll) (myfilter f (next coll)))
+      (myfilter f (next coll)))))
 
 (defn -main
   [& args]

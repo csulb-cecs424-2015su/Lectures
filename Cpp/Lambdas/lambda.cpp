@@ -24,7 +24,6 @@ int main() {
 
 
    // So what's with the square brackets?
-
    int outer1 = 10, outer2 = 50;
    auto h = [outer1](int a) {
       return a + outer1;
@@ -38,6 +37,7 @@ int main() {
 
    // What happens if I change outer1 now?
    outer1 = 100;
+
    cout << h(5) << endl;
    // Still prints 15... why? Think about where outer1 lives, and where h could
    // be returned to (another scope?). So what was actually captured?
@@ -48,7 +48,7 @@ int main() {
 
 std::function<int(int)> ReturnFunc() {
    int local = 10;
-   auto func = [local](int param) {
+   auto func = [&local](int param) {
       return local * param;
    };
 

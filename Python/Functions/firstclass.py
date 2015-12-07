@@ -22,6 +22,7 @@ def fun3():
     return fun1
 
 print(fun3())
+fun3()(100)
 # fun1 can be returned from a procedure
 
 # So functions are first-class citizens in Python! Yay!
