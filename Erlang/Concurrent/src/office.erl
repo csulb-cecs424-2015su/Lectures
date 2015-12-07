@@ -24,7 +24,7 @@ room(Students, Capacity) ->
           From ! {self(), not_found},
           room(Students, Capacity)
       end
-end.
+  end.
 
 studentWork(Name) ->
   SleepTime = rand:uniform(7000) + 3000,
